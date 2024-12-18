@@ -1,0 +1,236 @@
+.mainbox{
+   flex: 1;
+   min-height: 100vh;
+   padding-bottom: 15vh;
+   position: relative;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.user-logo{
+  width: 25px;
+height: 24px;
+border-radius: 50%;
+border: 2px solid gold;
+}
+.mainbox-container{
+    max-width: 900px;
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+ }
+
+.greet {
+    margin: 50px 0;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center; /* Center aligns the text */
+}
+
+.greet span {
+    background: -webkit-linear-gradient(45deg, #db08ad, #3fbe04);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensures the span adjusts to text size */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    height: 120px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    font-size: 16px;
+    color: #333;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.card .icon{
+    width: 35px;
+    height: 30px;
+    padding: 5px;
+    position: absolute;
+    border-radius: 20px;
+    top: 80px;
+    right: 10px;
+}
+.mainbox-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px 20px;
+    margin: auto;
+
+}
+.mainbox-bottom .icon{
+    width: 24px ;
+    cursor: pointer;
+}
+.search-box{
+    display: flex;
+    padding: 2px 8px;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0f4f9;
+    gap: 20px;
+    border-radius: 50px;
+
+}
+.search-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+.search-box input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+.search-box .box-icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.search-box .icon:hover {
+    color: #868789;
+  }
+
+  .result {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 200px); 
+    overflow-y: auto;
+  
+}
+.result::-webkit-scrollbar{
+    display: none;
+}
+  .result-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #505050;
+  }
+  
+  .result-data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .result-data p {
+    line-height: 1.9; /* Adjust as needed for desired spacing */
+    margin: 5px 0; /* Adds spacing between paragraphs, if multiple */
+  }
+   
+  @media (max-width:600px) {
+    .search-box input{
+      flex: none;
+      width: 150px;
+    }
+    .search-box .box-icon{
+      left: 3px;
+  }
+  .search-box {
+    padding: 5px 10px;
+  }
+  .search-box  div{
+    gap:5px;
+  }
+  }
+
+
+
+
+  /*  start CSS Loading icon */
+  
+  .load-container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 100px;
+  }
+  
+  .blocks {
+    position: relative;
+    z-index: 1000;
+    width: 6px;
+    height: 30px;
+    margin-left: 6px;
+    float: left;
+    background-color: deepskyblue;
+    animation: spiner 1s infinite ease-in-out;
+  }
+  
+  .blocks:first-child {
+    margin-left: 0;
+  }
+  
+  .b-one {
+    animation-delay: -1s;
+  }
+  
+  .b-two {
+    animation-delay: -0.9s;
+  }
+  .b-three {
+    animation-delay: -0.8s;
+  }
+  .b-four {
+    animation-delay: -0.7s;
+  }
+  .b-five {
+    animation-delay: -0.6s;
+  }
+  
+  @keyframes spiner {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(2);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  
